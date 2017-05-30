@@ -28,3 +28,18 @@ Usage: ss2json [options]
 		Sheet name in Google Spreadsheet
 		--name=SHEET_NAME or -n SHEET_NAME
 ```
+
+## Sample to use
+```javascript
+ss2json = require('ss2json')
+
+ss2json.convert({
+  jsonPath: 'JSON path for Google\'s authentication',
+  spreadsheetId: 'Google Spreadsheet ID',
+  sheetName: 'Sheet name in Google Spreadsheet'
+}).then((data) => {
+  console.log(data)
+}).catch((err) => {
+  console.error(err)
+})
+```
