@@ -6,6 +6,9 @@
   "scripts": {
     "test": "standard && mocha"
   },
+  "bin": {
+    "ss2json": "./bin/ss2json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abetomo/node-ss2json.git"
