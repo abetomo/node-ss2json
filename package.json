@@ -1,0 +1,31 @@
+{
+  "name": "ss2json",
+  "version": "0.0.1",
+  "description": "Convert Google Spreadsheet contents to JSON.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && mocha"
+  },
+  "bin": {
+    "ss2json": "./bin/ss2json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abetomo/node-ss2json.git"
+  },
+  "author": "abetomo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abetomo/node-ss2json/issues"
+  },
+  "homepage": "https://github.com/abetomo/node-ss2json#readme",
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "mocha": "^3.4.2",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "argv": "0.0.2",
+    "googleapis": "^19.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+'use srict'
+
+const SsToJson = require('..')
+const argv = require('argv')
+argv.option([{
+  name: 'json',
+  short: 'j',
+  type: 'string',
+  description: 'JSON path for Google\'s authentication',
+  example: '--json=JSON_FILE_PATH or -j JSON_FILE_PATH'
+}, {
+  name: 'id',
+  short: 'i',
+  type: 'string',
+  description: 'Google Spreadsheet ID',
+  example: '--id=SPREADSHEET_ID or -i SPREADSHEET_ID'
+}, {
+  name: 'name',
+  short: 'n',
+  type: 'string',
+  description: 'Sheet name in Google Spreadsheet',
+  example: '--name=SHEET_NAME or -n SHEET_NAME'
+}])
+const opt = argv.run().options
+
+SsToJson.convert({
+  jsonPath: opt.json,
+  spreadsheetId: opt.id,
+  sheetName: opt.name
+}).then((data) => {
+  console.log(data)
+}).catch((err) => {
+  console.error(err)
+})
