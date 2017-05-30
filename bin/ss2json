@@ -30,7 +30,7 @@ SsToJson.convert({
   spreadsheetId: opt.id,
   sheetName: opt.name
 }).then((data) => {
-  console.log(data)
+  console.log(JSON.stringify(data))
 }).catch((err) => {
   console.error(err)
 })
