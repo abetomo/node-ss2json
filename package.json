@@ -1,6 +1,6 @@
 {
   "name": "ss2json",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Convert Google Spreadsheet contents to JSON.",
   "main": "index.js",
   "scripts": {
