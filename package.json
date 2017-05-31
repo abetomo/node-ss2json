@@ -4,7 +4,6 @@
   "description": "Convert Google Spreadsheet contents to JSON.",
   "main": "index.js",
   "scripts": {
-    "postversion": "postversion.sh",
     "test": "standard && mocha"
   },
   "bin": {
