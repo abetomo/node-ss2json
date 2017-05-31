@@ -6,7 +6,6 @@ node_js:
 - 7
 deploy:
   provider: npm
-  email: abe@enzou.tokyo
   on:
     tags: true
   api_key:
