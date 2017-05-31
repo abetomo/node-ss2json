@@ -11,6 +11,6 @@ git add test/ss_to_json.js
 git commit -m "Commit upgrade to v${version}"
 git push origin ${branch}
 
-git tag -a v${version}
+git tag -a v${version} -m v${version}
 
-echo "Please run `git push origin v${version}` after merging release branch."
+echo "Please run 'git push origin v${version}' after merging release branch."
