@@ -10,5 +10,10 @@ describe('Ss2Json', () => {
     assert.instanceOf(Ss2Json, Object)
   })
 
+  it('version should be set', function () {
+    const packageVersion = '0.0.3'
+    assert.equal(Ss2Json.version(), packageVersion)
+  })
+
   it('More tests')
 })
