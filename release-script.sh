@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-newversion=${1:-patch}
-version=$(npm --no-git-tag-version version ${newversion} | sed -e s/^v//)
+version_option=${1:-patch}
+version=$(npm --no-git-tag-version version ${version_option} | sed -e s/^v//)
 branch="release/${version}"
 
 git checkout -b ${branch}
