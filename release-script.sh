@@ -17,7 +17,7 @@ version=$(npm --no-git-tag-version version ${version_option} | sed -e s/^v//)
 current_tag=$(git tag --sort=-taggerdate | head -1 | sed -e s/^v//)
 echo "## [${version}] - $(date +%Y-%m-%d)" >> CHANGELOG.md
 # Assumption that squash merging is done
-changelog=$(git log v${current_tag}.. | grep '(#[0-9]*)' | sed -e 's/^\s*/- /g' | tee -a CHANGELOG.md)
+changelog=$(git log v${current_tag}.. | grep '(#[0-9]*)' | sed -e 's/^\s*/- /g' | sed -e '$d' | tee -a CHANGELOG.md)
 
 ### Automatic correction of test code by creating branch
 branch="release/${version}"
