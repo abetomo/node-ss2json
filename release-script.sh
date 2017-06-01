@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+git checkout master
+git pull
+
 ### Increment version
 version_option=${1:-patch}
 version=$(npm --no-git-tag-version version ${version_option} | sed -e s/^v//)
