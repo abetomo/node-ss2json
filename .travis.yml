@@ -12,6 +12,11 @@ deploy:
   api_key:
     secure: W0h4wpgrq4s+gRZ84a70APUqF+3YefdG5ape1prt+o9IUx2+pQDaNeAm/2lJbXR9xQxEeHSv7hEDmLvnHMgfDl7Dm89VnA96bv96h8mXkRhfY0xfYiadE6J6Vy2p8DYMWVuHGkUS6oFDt38YdteFQc0mAm/6heFh8YugdbJijQhFoMlbOOugPPjhDe4Nyzpi3JpqgdQnicmhmlKYZ/+85aTl66SFMs+Y3VCdD4ChQZcj1TNsE5Tp5SGspyM2jqYkVJrlrnoty6GxW4/z+ynlw6x7RXNCaDzPozHtZD6fMZV7tQAc8iTAS1XwzPDRIJ6kzd8DX3Zi5OQyfnf74/ySEq8OUGtKmzvsH3cScsNH4FEPGFlXqNEG1ux41Jj7a4swZDTa1U832DZvswJiU0BbM7oRnJx4AUQpBLELTVgl+n8lfvX5UR88PLRPSWZV/1hd0Mqj1XCuQpRoENrm1WXoiNv4VJ/QbCJWbYCqqq0iq3mM9IwVXMZ/6ikAZRV+kuIGDob4vbnJqpE7BO+H6B0SXQ2w/sfTVypZUywYhhlpExIE/vcei9tO8wKHabwDKmYI/Ng4wYhw+qHOY0r6GbiCaIfy7lTMwboVhHqkBqoO8RpU12MI8TuiZDK4Wnj0HJCs0GOeq6i6bYznAVRHvfy+3fj5l6Mxl6E2DW1NZpIWZx4=
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_8b68e74ad801_key -iv $encrypted_8b68e74ad801_iv -in ".travis/github_deploy_key.enc" -out github_deploy_key -d
-- $(npm bin)/set-up-ssh --key $encrypted_8b68e74ad801_key --iv $encrypted_8b68e74ad801_iv --path-encrypted-key ".travis/github_deploy_key.enc"
-- ./release-script.sh
+- openssl aes-256-cbc -K $encrypted_8b68e74ad801_key -iv $encrypted_8b68e74ad801_iv
+  -in ".travis/github_deploy_key.enc" -out github_deploy_key -d
+- $(npm bin)/set-up-ssh --key $encrypted_8b68e74ad801_key --iv $encrypted_8b68e74ad801_iv
+  --path-encrypted-key ".travis/github_deploy_key.enc"
+- "./release-script.sh"
+env:
+  global:
+    secure: Fdg6ZmMeKFBawz2qT4fTi+apIdNBN0TG91lUCfuEipdrM8OwzmJARbTQHugwUo2p9XYTpcORucOzw2LSN1Ugkhxrp/157FUlwGNuk/GDe6DnKZQDCeh7/Dxnj6ufruxt0Si2Uiv0rYXgQBG4g7cSdq+m/WTCFwelOowDtJFzIkVrYC02E34dIKGU/cBe0y7zD3TwdJQ9zK1JkfNs968tFFJkI/BSKeRh3paAXOXWvObohi9ESoV/r64l++6Evd5SWgeuPb57oxQ0x+1Jc2zUlksaUvkAX7rBFH2aT7Ru0nYdzdz93/eBXZvloB3Xp//Y5DJHY8cnTCo6Ww9ScG0HV5jx0JT9m4XPR6lF0EcuvBxyz1yhbuABH5xcPrAbzlsJN3QzYfjmKC9ugv5vNSXaKKm+KrLXfUV6Vre7Ha4JSwahRAIAPN7JDm0L0J3nAb6dSgxhbifhXvifbMCIowItMHQipU7QRu23pJy6pzmVK5/iVz9Sr13dMakF7VaBZtsT5T5w+mEcjJNYscihTe81jXeyWV0VKsPc4KDkXO7hUL3Y3FtDNE2vo56XKStkJL32yrbStV15XMmWLnEO3fokLKXbYhgtNiC0UNU0/iyZa2TnAQKMh8ptBniYgRSVP0N0ODYmh1JXf6kmv76uiJ/ApXjVUzyzwbAWJQ7cJB33S98=
