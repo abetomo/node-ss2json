@@ -22,3 +22,6 @@ sed -i -e "s/\(const packageVersion =\).\+/\1 '${version}'/" test/ss_to_json.js
 git add test/ss_to_json.js package.json CHANGELOG.md
 git commit -m "Commit upgrade to v${version}"
 git push
+
+cd ..
+git pull
