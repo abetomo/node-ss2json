@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+git clone git@github.com:abetomo/node-ss2json.git -b master
+cd node-ss2json
 git config --global user.email "${GH_USER_EMAIL}"
 git config --global user.name "${GH_USER_NAME}"
 
