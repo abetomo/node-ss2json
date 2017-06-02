@@ -11,7 +11,7 @@ describe('Ss2Json', () => {
   })
 
   it('version should be set', function () {
-    const packageVersion = '0.0.17'
+    const packageVersion = '0.0.18'
     assert.equal(Ss2Json.version(), packageVersion)
   })
 

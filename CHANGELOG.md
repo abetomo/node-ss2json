@@ -13,3 +13,4 @@
 - Fix use TRAVIS_BRANCH & Add git tag -a (#24)
 - Fix release script (#23)
 ## [0.0.17] - 2017-06-02
+## [0.0.18] - 2017-06-02
