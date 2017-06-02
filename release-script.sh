@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-branch=$(git symbolic-ref --short HEAD)
+branch=$(git rev-parse --abbrev-ref HEAD)
 
 git clone git@github.com:abetomo/node-ss2json.git -b ${branch}
 cd node-ss2json
