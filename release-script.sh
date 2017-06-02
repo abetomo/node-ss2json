@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 
-branch=$(git rev-parse --abbrev-ref HEAD)
+branch=${TRAVIS_BRANCH}
+echo ${branch}
 
-git clone git@github.com:abetomo/node-ss2json.git -b ${branch}
+git clone git@github.com:abetomo/node-ss2json.git -b "${branch}"
 cd node-ss2json
 git config --global user.email "${GH_USER_EMAIL}"
 git config --global user.name "${GH_USER_NAME}"
@@ -29,6 +30,9 @@ git push
 git checkout master
 git merge ${branch}
 git push
+
+git tag -a v${version} -m "${changelog}"
+git push origin v${version}
 
 cd ..
 git pull
