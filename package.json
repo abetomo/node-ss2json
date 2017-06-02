@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/abetomo/node-ss2json#readme",
   "devDependencies": {
+    "@alrra/travis-scripts": "^3.0.1",
     "chai": "^4.0.0",
     "mocha": "^3.4.2",
     "standard": "^10.0.2"
