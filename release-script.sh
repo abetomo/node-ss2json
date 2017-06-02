@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+git config --global user.email "${GH_USER_EMAIL}"
+git config --global user.name "${GH_USER_NAME}"
+
 ### Increment version
 version_option=${1:-patch}
 version=$(npm --no-git-tag-version version ${version_option} | sed -e s/^v//)
