@@ -1,13 +1,23 @@
 #!/usr/bin/env sh
 
+branch=${TRAVIS_BRANCH}
+
+### check branch
+echo ${branch} | grep 'release'
+if [ $? -ne 0 ]; then
+    echo "[${branch}] It is not a target branch"
+    exit 0
+fi
+
+### ssh settings
+openssl aes-256-cbc -K ${encrypted_8b68e74ad801_key} -iv ${encrypted_8b68e74ad801_iv} -in ".travis/github_deploy_key.enc" -out github_deploy_key -d
+$(npm bin)/set-up-ssh --key ${encrypted_8b68e74ad801_key} --iv ${encrypted_8b68e74ad801_iv} --path-encrypted-key ".travis/github_deploy_key.enc"
+
 ### git settings
 git config --global user.email "${GH_USER_EMAIL}"
 git config --global user.name "${GH_USER_NAME}"
 
 ### check version
-branch=${TRAVIS_BRANCH}
-echo ${branch}
-
 new_version=$(echo ${branch} | cut -d/ -f2)
 current_version=$(node -e 'console.log(require("./package.json").version)')
 if [ "${new_version}" = "${current_version}" ]; then
