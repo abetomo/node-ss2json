@@ -3,7 +3,7 @@
 branch=${TRAVIS_BRANCH}
 
 ### check branch
-echo ${branch} | grep 'release'
+echo ${branch} | grep 'release/'
 if [ $? -ne 0 ]; then
     echo "[${branch}] It is not a target branch"
     exit 0
