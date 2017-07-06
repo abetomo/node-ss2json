@@ -3,32 +3,22 @@
 'use srict'
 
 const SsToJson = require('..')
-const argv = require('argv')
-argv.option([{
-  name: 'json',
-  short: 'j',
-  type: 'string',
-  description: 'JSON path for Google\'s authentication',
-  example: '--json=JSON_FILE_PATH or -j JSON_FILE_PATH'
-}, {
-  name: 'id',
-  short: 'i',
-  type: 'string',
-  description: 'Google Spreadsheet ID',
-  example: '--id=SPREADSHEET_ID or -i SPREADSHEET_ID'
-}, {
-  name: 'name',
-  short: 'n',
-  type: 'string',
-  description: 'Sheet name in Google Spreadsheet',
-  example: '--name=SHEET_NAME or -n SHEET_NAME'
-}])
-const opt = argv.run().options
+const program = require('commander')
+program
+  .option('-j, --json [JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
+  .option('-i, --id [SHEET_NAME]', 'Google Spreadsheet ID')
+  .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
+  .parse(process.argv)
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp()
+  process.exit(255)
+}
 
 SsToJson.convert({
-  jsonPath: opt.json,
-  spreadsheetId: opt.id,
-  sheetName: opt.name
+  jsonPath: program.json,
+  spreadsheetId: program.id,
+  sheetName: program.name
 }).then((data) => {
   console.log(JSON.stringify(data))
 }).catch((err) => {
