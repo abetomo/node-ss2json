@@ -2,6 +2,11 @@
   "name": "ss2json",
   "version": "0.0.25",
   "description": "Convert Google Spreadsheet contents to JSON.",
+  "keywords": [
+    "json",
+    "google",
+    "spreadsheet"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "standard && mocha"
