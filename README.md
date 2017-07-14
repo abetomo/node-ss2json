@@ -10,23 +10,15 @@ Convert Google Spreadsheet contents to JSON.
 ```
 % ss2json --help
 
-Usage: ss2json [options]
+  Usage: ss2json [options]
 
-	--help, -h
-		Displays help information about this script
-		'ss2json -h' or 'ss2json --help'
 
-	--json, -j
-		JSON path for Google's authentication
-		--json=JSON_FILE_PATH or -j JSON_FILE_PATH
+  Options:
 
-	--id, -i
-		Google Spreadsheet ID
-		--id=SPREADSHEET_ID or -i SPREADSHEET_ID
-
-	--name, -n
-		Sheet name in Google Spreadsheet
-		--name=SHEET_NAME or -n SHEET_NAME
+    -j, --json [JSON_FILE_PATH]  JSON path for Google's authentication
+    -i, --id [SHEET_NAME]        Google Spreadsheet ID
+    -n, --name [SHEET_NAME]      Sheet name in Google Spreadsheet
+    -h, --help                   output usage information
 ```
 
 ## Sample to use
