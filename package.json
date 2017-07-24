@@ -9,7 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "standard && mocha"
+    "test": "standard && mocha && jest"
   },
   "bin": {
     "ss2json": "./bin/ss2json"
