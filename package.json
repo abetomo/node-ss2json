@@ -9,7 +9,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "standard && mocha && jest"
+    "test": "standard && jest"
   },
   "bin": {
     "ss2json": "./bin/ss2json"
@@ -26,9 +26,7 @@
   "homepage": "https://github.com/abetomo/node-ss2json#readme",
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
-    "chai": "^4.0.0",
     "jest": "^20.0.4",
-    "mocha": "^3.4.2",
     "standard": "^10.0.2"
   },
   "dependencies": {
