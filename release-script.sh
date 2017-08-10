@@ -41,10 +41,10 @@ changelog=$(git log v${current_tag}.. | grep '(#[0-9]*)' | sed -e 's/^\s*/- /g' 
 echo ${changelog}
 
 ### Automatic correction of test code
-sed -i -e "s/\(const packageVersion =\).\+/\1 '${version}'/" test/ss_to_json.js
+sed -i -e "s/\(const packageVersion =\).\+/\1 '${version}'/" lib/__tests__/ss_to_json.js
 
 ### git commit & git push On the release branch
-git add test/ss_to_json.js package.json CHANGELOG.md
+git add lib/__tests__/ss_to_json.js package.json CHANGELOG.md
 git commit -m "Commit upgrade to v${version}"
 git push
 
