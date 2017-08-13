@@ -25,7 +25,7 @@ Convert Google Spreadsheet contents to JSON.
     -h, --help                   output usage information
 ```
 
-## Sample to use
+## Example to use as library
 ```javascript
 ss2json = require('ss2json')
 
