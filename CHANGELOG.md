@@ -23,3 +23,14 @@
 ## [0.1.0] - 2017-07-06
 ## [] - 2017-07-06
 ## [] - 2017-07-06
+## [0.2.0] - 2017-08-14
+- Modify the wording (#37)
+- Fix test file path (#36)
+- Delete mocha tests (#35)
+- Change class syntax (#34)
+- Add jest (#33)
+- Update readme (#32)
+- Add appveyor yml (#31)
+- Add jest test codes (#30)
+- Update README.md (#29)
+- Fix release script (#28)
