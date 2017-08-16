@@ -22,3 +22,5 @@
 - Bugfix (#40)
 - Remove meaningless lines (#39)
 - Add version to command line option (#38)
+## [0.2.2] - 2017-08-16
+- Update README according to current specifications (#41)
