@@ -21,7 +21,7 @@ if (!process.argv.slice(2).length) {
   process.exit(255)
 }
 
-SsToJson.convert({
+(new SsToJson()).convert({
   jsonPath: program.json,
   spreadsheetId: program.id,
   sheetName: program.name
