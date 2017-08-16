@@ -18,3 +18,7 @@
 - Add jest test codes (#30)
 - Update README.md (#29)
 - Fix release script (#28)
+## [0.2.1] - 2017-08-16
+- Bugfix (#40)
+- Remove meaningless lines (#39)
+- Add version to command line option (#38)
