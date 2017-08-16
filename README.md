@@ -19,6 +19,7 @@ Convert Google Spreadsheet contents to JSON.
 
   Options:
 
+    -V, --version                output the version number
     -j, --json [JSON_FILE_PATH]  JSON path for Google's authentication
     -i, --id [SHEET_NAME]        Google Spreadsheet ID
     -n, --name [SHEET_NAME]      Sheet name in Google Spreadsheet
@@ -27,7 +28,7 @@ Convert Google Spreadsheet contents to JSON.
 
 ## Example to use as library
 ```javascript
-ss2json = require('ss2json')
+ss2json = new (require('ss2json'))()
 
 ss2json.convert({
   jsonPath: 'JSON path for Google\'s authentication',
