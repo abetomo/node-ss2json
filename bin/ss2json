@@ -4,7 +4,13 @@
 
 const SsToJson = require('..')
 const program = require('commander')
+const fs = require('fs')
+const path = require('path')
+const packageJson = fs.existsSync(path.join(process.cwd(), 'package.json'))
+  ? require(path.join(process.cwd(), 'package.json')) : {}
+
 program
+  .version(packageJson.version)
   .option('-j, --json [JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
   .option('-i, --id [SHEET_NAME]', 'Google Spreadsheet ID')
   .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
