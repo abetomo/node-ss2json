@@ -27,7 +27,7 @@
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
     "jest": "^20.0.4",
-    "standard": "^10.0.2"
+    "standard": "^10.0.3"
   },
   "dependencies": {
     "commander": "^2.11.0",
