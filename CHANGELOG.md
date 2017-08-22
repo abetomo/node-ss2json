@@ -24,3 +24,8 @@
 - Add version to command line option (#38)
 ## [0.2.2] - 2017-08-16
 - Update README according to current specifications (#41)
+## [1.0.0] - 2017-08-22
+- Feature data update (#45)
+- Add test for _arrayToJson (#44)
+- Modify the Node.js to be used to latest stable release (#43)
+- Executed `npm update` (#42)
