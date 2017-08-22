@@ -14,29 +14,83 @@ Convert Google Spreadsheet contents to JSON.
 ```
 % ss2json --help
 
-  Usage: ss2json [options]
+  Usage: ss2json [options] [command]
 
 
   Options:
 
-    -V, --version                output the version number
-    -j, --json [JSON_FILE_PATH]  JSON path for Google's authentication
-    -i, --id [SHEET_NAME]        Google Spreadsheet ID
-    -n, --name [SHEET_NAME]      Sheet name in Google Spreadsheet
-    -h, --help                   output usage information
+    -V, --version  output the version number
+    -h, --help     output usage information
+
+
+  Commands:
+
+    get [options]
+    update [options]
+```
+
+### get
+```
+% ss2json get --help
+
+  Usage: get [options]
+
+
+  Options:
+
+    -a, --auth [AUTH_JSON_FILE_PATH]  JSON path for Google's authentication
+    -i, --id [SHEET_NAME]             Google Spreadsheet ID
+    -n, --name [SHEET_NAME]           Sheet name in Google Spreadsheet
+    -h, --help                        output usage information
+```
+
+### update
+```
+% ss2json update --help
+
+  Usage: update [options]
+
+
+  Options:
+
+    -a, --auth [AUTH_JSON_FILE_PATH]  JSON path for Google's authentication
+    -i, --id [SHEET_NAME]             Google Spreadsheet ID
+    -n, --name [SHEET_NAME]           Sheet name in Google Spreadsheet
+    -d, --data [DATA_JSON_FILE_PATH]  JSON file path for update data
+    -h, --help                        output usage information
 ```
 
 ## Example to use as library
+### get
 ```javascript
 ss2json = new (require('ss2json'))()
 
 ss2json.convert({
-  jsonPath: 'JSON path for Google\'s authentication',
+  authJsonPath: 'JSON path for Google\'s authentication',
   spreadsheetId: 'Google Spreadsheet ID',
   sheetName: 'Sheet name in Google Spreadsheet'
 }).then((data) => {
   console.log(data)
 }).catch((err) => {
   console.error(err)
+})
+```
+
+### upadte
+```javascript
+ss2json = new (require('ss2json'))()
+
+ss2json.update({
+  authJsonPath: 'JSON path for Google\'s authentication',
+  spreadsheetId: 'Google Spreadsheet ID',
+  sheetName: 'Sheet name in Google Spreadsheet',
+  values: [
+    // 'Update data'
+    {  key1: 'value1', key2: 'value2' },
+    {  key1: 'value3', key2: 'value4' },
+    ...
+  ]
+}).then((result) => {
+  console.log(result)
 })
 ```
