@@ -11,12 +11,12 @@ const packageJson = fs.existsSync(path.join(process.cwd(), 'package.json'))
 
 program
   .command('get')
-  .option('-j, --json [JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
+  .option('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
   .option('-i, --id [SHEET_NAME]', 'Google Spreadsheet ID')
   .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
   .action((prg) => {
     (new SsToJson()).convert({
-      jsonPath: prg.json,
+      authJsonPath: prg.auth,
       spreadsheetId: prg.id,
       sheetName: prg.name
     }).then((data) => {
@@ -28,13 +28,13 @@ program
 
 program
   .command('update')
-  .option('-j, --json [JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
+  .option('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
   .option('-i, --id [SHEET_NAME]', 'Google Spreadsheet ID')
   .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
   .option('-d, --data [DATA_JSON_FILE_PATH]', 'JSON file path for update data')
   .action((prg) => {
     (new SsToJson()).update({
-      jsonPath: prg.json,
+      authJsonPath: prg.auth,
       spreadsheetId: prg.id,
       sheetName: prg.name,
       values: require(path.join(process.cwd(), prg.data))
