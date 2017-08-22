@@ -10,23 +10,27 @@ const packageJson = fs.existsSync(path.join(process.cwd(), 'package.json'))
   ? require(path.join(process.cwd(), 'package.json')) : {}
 
 program
-  .version(packageJson.version)
+  .command('get')
   .option('-j, --json [JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
   .option('-i, --id [SHEET_NAME]', 'Google Spreadsheet ID')
   .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
+  .action((prg) => {
+    (new SsToJson()).convert({
+      jsonPath: prg.json,
+      spreadsheetId: prg.id,
+      sheetName: prg.name
+    }).then((data) => {
+      console.log(JSON.stringify(data))
+    }).catch((err) => {
+      console.error(err)
+    })
+  })
+
+program
+  .version(packageJson.version)
   .parse(process.argv)
 
 if (!process.argv.slice(2).length) {
   program.outputHelp()
   process.exit(255)
 }
-
-(new SsToJson()).convert({
-  jsonPath: program.json,
-  spreadsheetId: program.id,
-  sheetName: program.name
-}).then((data) => {
-  console.log(JSON.stringify(data))
-}).catch((err) => {
-  console.error(err)
-})
