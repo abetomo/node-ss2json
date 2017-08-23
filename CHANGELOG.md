@@ -29,3 +29,5 @@
 - Add test for _arrayToJson (#44)
 - Modify the Node.js to be used to latest stable release (#43)
 - Executed `npm update` (#42)
+## [1.0.1] - 2017-08-23
+- Update Readme according to current specifications (#46)
