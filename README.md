@@ -61,7 +61,7 @@ Also update Google spreadsheet from JSON data.
     -h, --help                        output usage information
 ```
 
-## Example to use as library
+## Usage example of Node.js API
 ### get
 ```javascript
 ss2json = new (require('ss2json'))()
