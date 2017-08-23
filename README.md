@@ -4,6 +4,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/ss6t664ub3v6lfds/branch/master?svg=true)](https://ci.appveyor.com/project/abetomo/node-ss2json/branch/master)
 
 Convert Google Spreadsheet contents to JSON.
+Also update Google spreadsheet from JSON data.
 
 ## install
 ```
