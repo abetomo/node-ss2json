@@ -33,3 +33,6 @@
 - Update Readme according to current specifications (#46)
 ## [1.0.2] - 2017-08-23
 - Modify section name (#47)
+## [1.1.0] - 2017-08-28
+- Bugfix path of data file at update (#50)
+- Fix not to require for path (#49)
