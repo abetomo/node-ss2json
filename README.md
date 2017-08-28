@@ -64,7 +64,7 @@ Also update Google spreadsheet from JSON data.
 ## Usage example of Node.js API
 ### get
 ```javascript
-ss2json = new (require('ss2json'))()
+const ss2json = new (require('ss2json'))()
 
 ss2json.convert({
   authJsonPath: 'JSON path for Google\'s authentication',
@@ -79,7 +79,7 @@ ss2json.convert({
 
 ### upadte
 ```javascript
-ss2json = new (require('ss2json'))()
+const ss2json = new (require('ss2json'))()
 
 ss2json.update({
   authJsonPath: 'JSON path for Google\'s authentication',
