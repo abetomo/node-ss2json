@@ -37,7 +37,7 @@ program
       authJsonPath: prg.auth,
       spreadsheetId: prg.id,
       sheetName: prg.name,
-      values: require(path.join(process.cwd(), prg.data))
+      values: JSON.parse(fs.readFileSync(prg.data))
     }).then((result) => {
       console.log(result)
     })
