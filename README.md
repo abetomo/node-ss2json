@@ -1,5 +1,6 @@
 # node-ss2json
 
+[![npm version](https://badge.fury.io/js/ss2json.svg)](https://badge.fury.io/js/ss2json)
 [![Build Status](https://travis-ci.org/abetomo/node-ss2json.svg?branch=master)](https://travis-ci.org/abetomo/node-ss2json)
 [![Build status](https://ci.appveyor.com/api/projects/status/ss6t664ub3v6lfds/branch/master?svg=true)](https://ci.appveyor.com/project/abetomo/node-ss2json/branch/master)
 
