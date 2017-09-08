@@ -11,7 +11,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "standard && jest"
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "jest"
   },
   "bin": {
     "ss2json": "./bin/ss2json"
