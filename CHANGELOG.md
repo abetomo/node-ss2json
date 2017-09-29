@@ -36,3 +36,10 @@
 ## [1.1.0] - 2017-08-28
 - Bugfix path of data file at update (#50)
 - Fix not to require for path (#49)
+## [1.1.1] - 2017-09-29
+- Fix to encode sheet name (#56)
+- Upgrade jest (#55)
+- Add googleapis mock (#54)
+- Add setting to execute lint and unittest separately (#53)
+- Add npm badge (#52)
+- Add `const` to README code example (#51)
