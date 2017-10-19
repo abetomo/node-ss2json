@@ -40,6 +40,8 @@ program
       values: JSON.parse(fs.readFileSync(prg.data))
     }).then((result) => {
       console.log(result)
+    }).catch((err) => {
+      console.error(err)
     })
   })
 
