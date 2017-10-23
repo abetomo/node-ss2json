@@ -43,3 +43,8 @@
 - Add setting to execute lint and unittest separately (#53)
 - Add npm badge (#52)
 - Add `const` to README code example (#51)
+## [1.1.2] - 2017-10-23
+- Add catch (#60)
+- Add getRange method (#59)
+- Fix to also commit package-lock.json (#58)
+- Update package.json and package-lock.json (#57)
