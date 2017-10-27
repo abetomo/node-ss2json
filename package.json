@@ -36,5 +36,16 @@
   "dependencies": {
     "commander": "^2.11.0",
     "googleapis": "^19.0.0"
-  }
+  },
+  "files": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "__mocks__",
+    "__tests__",
+    "bin",
+    "index.js",
+    "lib",
+    "package.json"
+  ]
 }
