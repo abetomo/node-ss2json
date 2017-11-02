@@ -48,3 +48,5 @@
 - Add getRange method (#59)
 - Fix to also commit package-lock.json (#58)
 - Update package.json and package-lock.json (#57)
+## [1.1.3] - 2017-11-02
+- Add files field to package.json (#61)
