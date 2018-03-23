@@ -47,5 +47,8 @@
     "index.js",
     "lib",
     "package.json"
-  ]
+  ],
+  "engines": {
+    "node": ">= 6.0.0"
+  }
 }
