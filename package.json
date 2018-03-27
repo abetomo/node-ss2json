@@ -30,11 +30,11 @@
   "homepage": "https://github.com/abetomo/node-ss2json#readme",
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
-    "jest": "^21.2.1",
-    "standard": "^10.0.3"
+    "jest": "",
+    "standard": ""
   },
   "dependencies": {
-    "commander": "^2.15.0",
+    "commander": "^2.15.1",
     "googleapis": "^19.0.0"
   },
   "files": [
