@@ -50,3 +50,9 @@
 - Update package.json and package-lock.json (#57)
 ## [1.1.3] - 2017-11-02
 - Add files field to package.json (#61)
+## [2.0.0] - 2018-03-28
+- Fix to erase specification of version for development package (#66)
+- Changes that support Node.js 6 or higher (#65)
+- Fix to omit parentheses (#64)
+- npm update (#63)
+- Add nodejs version to ci yml (#62)
