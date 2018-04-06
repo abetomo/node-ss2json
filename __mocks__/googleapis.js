@@ -19,13 +19,13 @@ class JWT {
     }
   }
 }
-googleapis.auth = {JWT: JWT}
+googleapis.google.auth = {JWT: JWT}
 
 // spreadsheets
 const sheetsObject = {spreadsheets: {values: {}}}
 sheetsObject.spreadsheets.values = {
   get (_, callback) {
-    callback(null, {
+    callback(null, {data: {
       range: 'name!A1:Z9',
       majorDimension: 'ROWS',
       values: [
@@ -33,11 +33,11 @@ sheetsObject.spreadsheets.values = {
         ['a', 'b', 'c'],
         ['e', 'f', 'g']
       ]
-    })
+    }})
   },
 
   batchUpdate (_, callback) {
-    callback(null, {
+    callback(null, {data: {
       spreadsheetId: 'spreadsheetId',
       totalUpdatedRows: 1,
       totalUpdatedColumns: 2,
@@ -50,9 +50,9 @@ sheetsObject.spreadsheets.values = {
         updatedColumns: 5,
         updatedCells: 7
       }]
-    })
+    }})
   }
 }
-googleapis.sheets = () => sheetsObject
+googleapis.google.sheets = () => sheetsObject
 
 module.exports = googleapis
