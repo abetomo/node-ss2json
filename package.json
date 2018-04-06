@@ -31,6 +31,7 @@
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
     "jest": "",
+    "request": "^2.85.0",
     "standard": ""
   },
   "dependencies": {
