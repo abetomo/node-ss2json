@@ -56,3 +56,5 @@
 - Fix to omit parentheses (#64)
 - npm update (#63)
 - Add nodejs version to ci yml (#62)
+## [2.0.1] - 2018-04-09
+- Upgrade googleapis (#67)
