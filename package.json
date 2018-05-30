@@ -31,12 +31,12 @@
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
     "jest": "",
-    "request": "^2.85.0",
+    "request": "^2.87.0",
     "standard": ""
   },
   "dependencies": {
     "commander": "^2.15.1",
-    "googleapis": "^29.0.0"
+    "googleapis": "^31.0.2"
   },
   "files": [
     "CHANGELOG.md",
