@@ -58,3 +58,7 @@
 - Add nodejs version to ci yml (#62)
 ## [2.0.1] - 2018-04-09
 - Upgrade googleapis (#67)
+## [2.0.2] - 2018-05-31
+- npm update (#70)
+- Add Node.js10 to CI setting (#69)
+- Upgrade googleapis (#68)
