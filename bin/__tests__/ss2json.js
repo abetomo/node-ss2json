@@ -12,5 +12,7 @@ describe('bin/ss2json', () => {
     expect(ret.toString().trim()).toBe(packageJson.version)
   })
 
-  test('More tests')
+  describe('More tests', () => {
+    test.skip('More tests', () => {})
+  })
 })
