@@ -62,3 +62,7 @@
 - npm update (#70)
 - Add Node.js10 to CI setting (#69)
 - Upgrade googleapis (#68)
+## [2.0.3] - 2018-07-04
+- Remove unnecessary Promise (#73)
+- Fix using reduce (#72)
+- Add cache `node_modules` (#71)
