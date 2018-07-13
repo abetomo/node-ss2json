@@ -68,3 +68,5 @@
 - Add cache `node_modules` (#71)
 ## [2.1.0] - 2018-07-13
 - Improve ss_to_json.js error handling (#74)
+## [2.1.2] - 2018-07-13
+- Update npm api_key (#75)
