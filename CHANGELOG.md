@@ -66,3 +66,5 @@
 - Remove unnecessary Promise (#73)
 - Fix using reduce (#72)
 - Add cache `node_modules` (#71)
+## [2.1.0] - 2018-07-13
+- Improve ss_to_json.js error handling (#74)
