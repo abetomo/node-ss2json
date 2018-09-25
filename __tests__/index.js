@@ -21,8 +21,8 @@ describe('Ss2Json', () => {
   test('convert', () => {
     return ss2json.convert(testParams).then(data => {
       expect(data).toEqual([
-        {col1: 'a', col2: 'b', col3: 'c'},
-        {col1: 'e', col2: 'f', col3: 'g'}
+        { col1: 'a', col2: 'b', col3: 'c' },
+        { col1: 'e', col2: 'f', col3: 'g' }
       ])
     })
   })
