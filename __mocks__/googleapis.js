@@ -25,6 +25,10 @@ googleapis.google.auth = { JWT: JWT }
 const sheetsObject = { spreadsheets: { values: {} } }
 sheetsObject.spreadsheets.values = {
   get (_, callback) {
+    if (_.spreadsheetId == 'failed') {
+      callback(new Error('Error: get'))
+      return
+    }
     callback(null, { data: {
       range: 'name!A1:Z9',
       majorDimension: 'ROWS',
@@ -37,6 +41,10 @@ sheetsObject.spreadsheets.values = {
   },
 
   batchUpdate (_, callback) {
+    if (_.spreadsheetId == 'failed') {
+      callback(new Error('Error: batchUpdate'))
+      return
+    }
     callback(null, { data: {
       spreadsheetId: 'spreadsheetId',
       totalUpdatedRows: 1,
