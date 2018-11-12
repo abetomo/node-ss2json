@@ -70,3 +70,14 @@
 - Improve ss_to_json.js error handling (#74)
 ## [2.1.2] - 2018-07-13
 - Update npm api_key (#75)
+## [2.1.3] - 2018-11-12
+- npm audit fix (#85)
+- Use destructuring assignment (#84)
+- Add Node.js11 to CI setting (#83)
+- Add 'collectCoverage' option to 'jest' (#82)
+- Add error case test (#81)
+- Upgrade googleapis (#80)
+- Modify to follow the rules of the new 'standard' (#79)
+- Update CI test to LTS version (#78)
+- Remove jest setting (#77)
+- Upgrade packages and add jest settings (#76)
