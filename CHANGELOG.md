@@ -81,3 +81,8 @@
 - Update CI test to LTS version (#78)
 - Remove jest setting (#77)
 - Upgrade packages and add jest settings (#76)
+## [2.1.4] - 2019-03-28
+- Upgrade googleapis and jest (#89)
+- Add `.github/main.workflow` (#88)
+- Upgrade googleapis (#87)
+- Upgrade googleapis (#86)
