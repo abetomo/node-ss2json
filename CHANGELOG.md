@@ -86,3 +86,5 @@
 - Add `.github/main.workflow` (#88)
 - Upgrade googleapis (#87)
 - Upgrade googleapis (#86)
+## [3.0.0] - 2019-06-20
+- Bump js-yaml from 3.13.0 to 3.13.1 (#90)
