@@ -78,7 +78,7 @@ ss2json.convert({
 })
 ```
 
-### upadte
+### update
 ```javascript
 const ss2json = new (require('ss2json'))()
 
