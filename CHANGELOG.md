@@ -88,3 +88,6 @@
 - Upgrade googleapis (#86)
 ## [3.0.0] - 2019-06-20
 - Bump js-yaml from 3.13.0 to 3.13.1 (#90)
+## [3.0.1] - 2019-07-31
+- docs(readme) fixed typo (#93)
+- Bump lodash from 4.17.11 to 4.17.14 (#92)
