@@ -34,32 +34,26 @@ Also update Google spreadsheet from JSON data.
 ### get
 ```
 % ss2json get --help
+Usage: get [options]
 
-  Usage: get [options]
-
-
-  Options:
-
-    -a, --auth [AUTH_JSON_FILE_PATH]  JSON path for Google's authentication
-    -i, --id [SHEET_NAME]             Google Spreadsheet ID
-    -n, --name [SHEET_NAME]           Sheet name in Google Spreadsheet
-    -h, --help                        output usage information
+Options:
+  -a, --auth [AUTH_JSON_FILE_PATH]  JSON path for Google's authentication
+  -i, --id [SPREADSHEET_ID]         Google Spreadsheet ID
+  -n, --name [SHEET_NAME]           Sheet name in Google Spreadsheet
+  -h, --help
 ```
 
 ### update
 ```
 % ss2json update --help
+Usage: update [options]
 
-  Usage: update [options]
-
-
-  Options:
-
-    -a, --auth [AUTH_JSON_FILE_PATH]  JSON path for Google's authentication
-    -i, --id [SHEET_NAME]             Google Spreadsheet ID
-    -n, --name [SHEET_NAME]           Sheet name in Google Spreadsheet
-    -d, --data [DATA_JSON_FILE_PATH]  JSON file path for update data
-    -h, --help                        output usage information
+Options:
+  -a, --auth [AUTH_JSON_FILE_PATH]  JSON path for Google's authentication
+  -i, --id [SPREADSHEET_ID]         Google Spreadsheet ID
+  -n, --name [SHEET_NAME]           Sheet name in Google Spreadsheet
+  -d, --data [DATA_JSON_FILE_PATH]  JSON file path for update data
+  -h, --help
 ```
 
 ## Usage example of Node.js API
