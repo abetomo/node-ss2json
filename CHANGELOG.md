@@ -91,3 +91,5 @@
 ## [3.0.1] - 2019-07-31
 - docs(readme) fixed typo (#93)
 - Bump lodash from 4.17.11 to 4.17.14 (#92)
+## [3.0.2] - 2019-08-05
+- Modify command description (#94)
