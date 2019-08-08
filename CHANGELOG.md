@@ -93,3 +93,5 @@
 - Bump lodash from 4.17.11 to 4.17.14 (#92)
 ## [3.0.2] - 2019-08-05
 - Modify command description (#94)
+## [3.0.3] - 2019-08-08
+- Random PR (#95)
