@@ -15,20 +15,15 @@ Also update Google spreadsheet from JSON data.
 ## help
 ```
 % ss2json --help
+Usage: ss2json [options] [command]
 
-  Usage: ss2json [options] [command]
+Options:
+  -V, --version     output the version number
+  -h, --help        output usage information
 
-
-  Options:
-
-    -V, --version  output the version number
-    -h, --help     output usage information
-
-
-  Commands:
-
-    get [options]
-    update [options]
+Commands:
+  get [options]
+  update [options]
 ```
 
 ### get
