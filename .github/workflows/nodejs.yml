@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name: Test on node ${{ matrix.node-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -16,5 +15,13 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Cache node modules
+      uses: actions/cache@preview
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+      if: matrix.os != 'windows-latest'
     - run: npm install
     - run: npm test
