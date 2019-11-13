@@ -84,3 +84,7 @@ ss2json.update({
   console.log(result)
 })
 ```
+
+## `AUTH_JSON_FILE_PATH` / `authJsonPath`
+
+Use GCP service account credentials. You first need to create a service account, download its json key.
