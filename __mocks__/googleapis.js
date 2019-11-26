@@ -29,15 +29,17 @@ sheetsObject.spreadsheets.values = {
       callback(new Error('Error: get'))
       return
     }
-    callback(null, { data: {
-      range: 'name!A1:Z9',
-      majorDimension: 'ROWS',
-      values: [
-        ['col1', 'col2', 'col3'],
-        ['a', 'b', 'c'],
-        ['e', 'f', 'g']
-      ]
-    } })
+    callback(null, {
+      data: {
+        range: 'name!A1:Z9',
+        majorDimension: 'ROWS',
+        values: [
+          ['col1', 'col2', 'col3'],
+          ['a', 'b', 'c'],
+          ['e', 'f', 'g']
+        ]
+      }
+    })
   },
 
   batchUpdate (_, callback) {
@@ -45,20 +47,22 @@ sheetsObject.spreadsheets.values = {
       callback(new Error('Error: batchUpdate'))
       return
     }
-    callback(null, { data: {
-      spreadsheetId: 'spreadsheetId',
-      totalUpdatedRows: 1,
-      totalUpdatedColumns: 2,
-      totalUpdatedCells: 3,
-      totalUpdatedSheets: 4,
-      responses: [{
+    callback(null, {
+      data: {
         spreadsheetId: 'spreadsheetId',
-        updatedRange: 'name!A1:Z9',
-        updatedRows: 5,
-        updatedColumns: 5,
-        updatedCells: 7
-      }]
-    } })
+        totalUpdatedRows: 1,
+        totalUpdatedColumns: 2,
+        totalUpdatedCells: 3,
+        totalUpdatedSheets: 4,
+        responses: [{
+          spreadsheetId: 'spreadsheetId',
+          updatedRange: 'name!A1:Z9',
+          updatedRows: 5,
+          updatedColumns: 5,
+          updatedCells: 7
+        }]
+      }
+    })
   }
 }
 googleapis.google.sheets = () => sheetsObject
