@@ -21,7 +21,8 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
-    - run: npm install
+    - run: npm i -g npm
+    - run: npm ci
     - run: npm test
 
   windows-test:
@@ -41,5 +42,6 @@ jobs:
         key: windows-node-${{ hashFiles('**\package-lock.json') }}
         restore-keys: |
           windows-node-
-    - run: npm install
+    - run: npm i -g npm
+    - run: npm ci
     - run: npm test
