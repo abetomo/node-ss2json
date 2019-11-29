@@ -95,3 +95,10 @@
 - Modify command description (#94)
 ## [3.0.3] - 2019-08-08
 - Random PR (#95)
+## [3.0.4] - 2019-11-29
+- Upgrade 'googleapis' (#101)
+- Bump eslint-utils from 1.4.0 to 1.4.2 (#99)
+- Fix because it was not tested on all OS (#100)
+- Update CI settings (#98)
+- Upgrade googleapis (#97)
+- Upgrade commander (#96)
