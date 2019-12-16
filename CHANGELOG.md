@@ -102,3 +102,5 @@
 - Update CI settings (#98)
 - Upgrade googleapis (#97)
 - Upgrade commander (#96)
+## [3.0.5] - 2019-12-16
+- Upgrade googleapis@46.0.0 (#102)
