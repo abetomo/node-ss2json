@@ -104,3 +104,5 @@
 - Upgrade commander (#96)
 ## [3.0.5] - 2019-12-16
 - Upgrade googleapis@46.0.0 (#102)
+## [3.0.6] - 2020-01-30
+- Upgrade googleapis (#103)
