@@ -6,6 +6,7 @@ jobs:
   test:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         node-version: [8.x, 10.x, 12.x, 13.x]
         os: [ubuntu-latest, macos-latest]
@@ -28,6 +29,7 @@ jobs:
   windows-test:
     runs-on: windows-latest
     strategy:
+      fail-fast: false
       matrix:
         node-version: [8.x, 10.x, 12.x, 13.x]
     steps:
