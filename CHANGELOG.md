@@ -106,3 +106,6 @@
 - Upgrade googleapis@46.0.0 (#102)
 ## [3.0.6] - 2020-01-30
 - Upgrade googleapis (#103)
+## [3.0.7] - 2020-04-13
+- Upgrade googleapis (#105)
+- Bump acorn from 6.4.0 to 6.4.1 (#104)
