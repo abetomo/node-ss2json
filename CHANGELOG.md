@@ -111,3 +111,5 @@
 - Bump acorn from 6.4.0 to 6.4.1 (#104)
 ## [3.0.8] - 2020-05-27
 - Upgrade packages (#106)
+## [3.1.0] - 2020-05-29
+- Implement the automatic addition of a sheet (#108)
