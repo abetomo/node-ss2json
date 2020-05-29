@@ -32,12 +32,14 @@ program
   .option('-i, --id [SPREADSHEET_ID]', 'Google Spreadsheet ID')
   .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
   .option('-d, --data [DATA_JSON_FILE_PATH]', 'JSON file path for update data')
+  .option('--autoAddSheet', 'Add when there was no sheet.')
   .action((prg) => {
     (new SsToJson()).update({
       authJsonPath: prg.auth,
       spreadsheetId: prg.id,
       sheetName: prg.name,
-      values: JSON.parse(fs.readFileSync(prg.data))
+      values: JSON.parse(fs.readFileSync(prg.data)),
+      autoAdd: prg.autoAddSheet
     }).then((result) => {
       console.log(result)
     }).catch((err) => {
