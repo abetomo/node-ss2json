@@ -41,14 +41,15 @@ Options:
 ### update
 ```
 % ss2json update --help
-Usage: update [options]
+Usage: ss2json update [options]
 
 Options:
   -a, --auth [AUTH_JSON_FILE_PATH]  JSON path for Google's authentication
   -i, --id [SPREADSHEET_ID]         Google Spreadsheet ID
   -n, --name [SHEET_NAME]           Sheet name in Google Spreadsheet
   -d, --data [DATA_JSON_FILE_PATH]  JSON file path for update data
-  -h, --help
+  --autoAddSheet                    Add when there was no sheet.
+  -h, --help                        output usage information
 ```
 
 ## Usage example of Node.js API
@@ -80,7 +81,8 @@ ss2json.update({
     {  key1: 'value1', key2: 'value2' },
     {  key1: 'value3', key2: 'value4' },
     ...
-  ]
+  ],
+  autoAdd: true // If true, the sheet will be added automatically if it doesn't exist.
 }).then((result) => {
   console.log(result)
 })
