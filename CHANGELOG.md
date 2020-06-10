@@ -114,3 +114,5 @@
 ## [3.1.0] - 2020-05-29
 - Implement the automatic addition of a sheet (#108)
 ## [3.1.1] - 2020-06-03
+## [3.2.0] - 2020-06-10
+- Upgrade googleapis (#110)
