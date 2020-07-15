@@ -116,3 +116,6 @@
 ## [3.1.1] - 2020-06-03
 ## [3.2.0] - 2020-06-10
 - Upgrade googleapis (#110)
+## [3.2.1] - 2020-07-15
+- Upgrade googleapis (#112)
+- Upgrade 'commander' to 5 (#111)
