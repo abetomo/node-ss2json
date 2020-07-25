@@ -10,15 +10,19 @@ const packageJson = fs.existsSync(path.join(process.cwd(), 'package.json'))
   ? require(path.join(process.cwd(), 'package.json')) : {}
 
 program
+  .storeOptionsAsProperties(false)
+  .passCommandToAction(false)
+
+program
   .command('get')
   .option('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
   .option('-i, --id [SPREADSHEET_ID]', 'Google Spreadsheet ID')
   .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
-  .action((prg) => {
+  .action((options) => {
     (new SsToJson()).convert({
-      authJsonPath: prg.auth,
-      spreadsheetId: prg.id,
-      sheetName: prg.name
+      authJsonPath: options.auth,
+      spreadsheetId: options.id,
+      sheetName: options.name
     }).then((data) => {
       console.log(JSON.stringify(data))
     }).catch((err) => {
@@ -33,13 +37,13 @@ program
   .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
   .option('-d, --data [DATA_JSON_FILE_PATH]', 'JSON file path for update data')
   .option('--autoAddSheet', 'Add when there was no sheet.')
-  .action((prg) => {
+  .action((options) => {
     (new SsToJson()).update({
-      authJsonPath: prg.auth,
-      spreadsheetId: prg.id,
-      sheetName: prg.name,
-      values: JSON.parse(fs.readFileSync(prg.data)),
-      autoAdd: prg.autoAddSheet
+      authJsonPath: options.auth,
+      spreadsheetId: options.id,
+      sheetName: options.name,
+      values: JSON.parse(fs.readFileSync(options.data)),
+      autoAdd: options.autoAddSheet
     }).then((result) => {
       console.log(result)
     }).catch((err) => {
