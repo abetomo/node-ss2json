@@ -122,3 +122,5 @@
 ## [3.2.2] - 2020-07-26
 - Upgrade `commander` (#114)
 - Bump lodash from 4.17.15 to 4.17.19 (#113)
+## [3.2.3] - 2020-08-10
+- Upgrade 'googleapis' (#115)
