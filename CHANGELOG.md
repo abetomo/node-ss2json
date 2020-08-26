@@ -124,3 +124,5 @@
 - Bump lodash from 4.17.15 to 4.17.19 (#113)
 ## [3.2.3] - 2020-08-10
 - Upgrade 'googleapis' (#115)
+## [3.2.4] - 2020-08-26
+- Upgrade googleapis (#116)
