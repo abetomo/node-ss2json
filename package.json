@@ -1,6 +1,6 @@
 {
   "name": "ss2json",
-  "version": "3.2.4",
+  "version": "3.2.5",
   "description": "Convert Google Spreadsheet contents to JSON. Also update Google spreadsheet from JSON data.",
   "keywords": [
     "json",
@@ -58,9 +58,18 @@
   "remarkConfig": {
     "plugins": [
       "remark-preset-lint-recommended",
-      ["remark-lint-no-shortcut-reference-link", false],
-      ["remark-lint-no-undefined-references", false],
-      ["remark-lint-list-item-indent", "space"]
+      [
+        "remark-lint-no-shortcut-reference-link",
+        false
+      ],
+      [
+        "remark-lint-no-undefined-references",
+        false
+      ],
+      [
+        "remark-lint-list-item-indent",
+        "space"
+      ]
     ]
   },
   "engines": {
