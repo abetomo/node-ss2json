@@ -1,7 +1,7 @@
 # node-ss2json
 
 [![npm version](https://badge.fury.io/js/ss2json.svg)](https://badge.fury.io/js/ss2json)
-![Node CI](https://github.com/abetomo/node-ss2json/workflows/Node%20CI/badge.svg)
+![Test](https://github.com/abetomo/node-ss2json/workflows/Test/badge.svg)
 [![Build Status](https://travis-ci.org/abetomo/node-ss2json.svg?branch=master)](https://travis-ci.org/abetomo/node-ss2json)
 
 Convert Google Spreadsheet contents to JSON.
