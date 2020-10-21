@@ -1,6 +1,6 @@
 {
   "name": "ss2json",
-  "version": "3.2.5",
+  "version": "3.2.6",
   "description": "Convert Google Spreadsheet contents to JSON. Also update Google spreadsheet from JSON data.",
   "keywords": [
     "json",
@@ -17,7 +17,7 @@
     "unit": "jest"
   },
   "bin": {
-    "ss2json": "./bin/ss2json"
+    "ss2json": "bin/ss2json"
   },
   "repository": {
     "type": "git",
