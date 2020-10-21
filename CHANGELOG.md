@@ -129,3 +129,4 @@
 ## [3.2.5] - 2020-10-03
 - Upgrade googleapis to 60 (#118)
 - Bump node-fetch from 2.6.0 to 2.6.1 (#117)
+## [3.2.6] - 2020-10-21
