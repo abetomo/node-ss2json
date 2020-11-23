@@ -1,6 +1,6 @@
 {
   "name": "ss2json",
-  "version": "3.2.7",
+  "version": "3.2.8",
   "description": "Convert Google Spreadsheet contents to JSON. Also update Google spreadsheet from JSON data.",
   "keywords": [
     "json",
@@ -30,7 +30,6 @@
   },
   "homepage": "https://github.com/abetomo/node-ss2json#readme",
   "devDependencies": {
-    "@alrra/travis-scripts": "^3.0.1",
     "jest": "^26.4.2",
     "remark-cli": "^8.0.1",
     "remark-preset-lint-recommended": "^4.0.1",
