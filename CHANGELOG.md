@@ -134,3 +134,5 @@
 - Upgrade googleapis to 62.0.0 (#120)
 ## [3.2.8] - 2020-11-23
 - Upgrade googleapis to 64 (#121)
+## [3.2.9] - 2020-12-04
+- Upgrade googleapis to 66 (#124)
