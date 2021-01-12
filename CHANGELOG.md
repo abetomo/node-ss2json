@@ -136,3 +136,7 @@
 - Upgrade googleapis to 64 (#121)
 ## [3.2.9] - 2020-12-04
 - Upgrade googleapis to 66 (#124)
+## [3.2.10] - 2021-01-12
+- upgrade googleapis to 67 (#128)
+- Bump node-notifier from 8.0.0 to 8.0.1 (#127)
+- Bump ini from 1.3.5 to 1.3.8 (#126)
