@@ -140,3 +140,5 @@
 - upgrade googleapis to 67 (#128)
 - Bump node-notifier from 8.0.0 to 8.0.1 (#127)
 - Bump ini from 1.3.5 to 1.3.8 (#126)
+## [3.2.11] - 2021-03-23
+- chore: upgrade googleapis to 68 (#130)
