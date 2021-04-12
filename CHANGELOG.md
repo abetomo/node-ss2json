@@ -142,3 +142,5 @@
 - Bump ini from 1.3.5 to 1.3.8 (#126)
 ## [3.2.11] - 2021-03-23
 - chore: upgrade googleapis to 68 (#130)
+## [3.2.12] - 2021-04-12
+- chore: upgrade googleapis to 71 (#132)
