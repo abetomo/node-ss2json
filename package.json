@@ -1,6 +1,6 @@
 {
   "name": "ss2json",
-  "version": "3.2.13",
+  "version": "3.2.14",
   "description": "Convert Google Spreadsheet contents to JSON. Also update Google spreadsheet from JSON data.",
   "keywords": [
     "json",
