@@ -150,3 +150,5 @@
 - chore(deps): upgrade googleapis to 76 (#136)
 ## [3.2.15] - 2021-06-20
 - upgrade googleapis to 77 (#137)
+## [3.2.16] - 2021-06-24
+- chore(deps): upgrade googleapis to 78 (#138)
