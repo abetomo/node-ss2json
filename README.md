@@ -51,6 +51,27 @@ Options:
   -h, --help                        output usage information
 ```
 
+## Command example
+
+Get the data from the spreadsheet and write it to `data.json`.
+
+```
+% ss2json get \
+    -a AUTH_JSON_FILE_PATH \
+    -i SPREADSHEET_ID \
+    -n SHEET_NAME > ./data.json
+```
+
+You can also edit `data.json` to update the spreadsheet.
+
+```
+% ss2json update \
+    -a AUTH_JSON_FILE_PATH \
+    -i SPREADSHEET_ID \
+    -n SHEET_NAME \
+    -d ./data.json
+```
+
 ## Usage example of Node.js API
 ### get
 ```javascript
