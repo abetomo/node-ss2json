@@ -4,9 +4,9 @@
 
 const SsToJson = require('..')
 const { program } = require('commander')
-const fs = require('fs')
+const { existsSync, readFileSync } = require('fs')
 const path = require('path')
-const packageJson = fs.existsSync(path.join(process.cwd(), 'package.json'))
+const packageJson = existsSync(path.join(process.cwd(), 'package.json'))
   ? require(path.join(process.cwd(), 'package.json')) : {}
 
 program
@@ -15,49 +15,51 @@ program
 
 program
   .command('get')
-  .option('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
-  .option('-i, --id [SPREADSHEET_ID]', 'Google Spreadsheet ID')
-  .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
-  .action((options) => {
-    (new SsToJson()).convert({
-      authJsonPath: options.auth,
-      spreadsheetId: options.id,
-      sheetName: options.name
-    }).then((data) => {
+  .requiredOption('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
+  .requiredOption('-i, --id [SPREADSHEET_ID]', 'Google Spreadsheet ID')
+  .requiredOption('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
+  .action(async (options) => {
+    try {
+      const data = await (new SsToJson()).convert({
+        authJsonPath: options.auth,
+        spreadsheetId: options.id,
+        sheetName: options.name
+      })
       console.log(JSON.stringify(data))
-    }).catch((err) => {
+    } catch (err) {
       console.error(err)
-    })
+    }
   })
 
 program
   .command('update')
-  .option('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
-  .option('-i, --id [SPREADSHEET_ID]', 'Google Spreadsheet ID')
-  .option('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
-  .option('-d, --data [DATA_JSON_FILE_PATH]', 'JSON file path for update data')
+  .requiredOption('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
+  .requiredOption('-i, --id [SPREADSHEET_ID]', 'Google Spreadsheet ID')
+  .requiredOption('-n, --name [SHEET_NAME]', 'Sheet name in Google Spreadsheet')
+  .requiredOption('-d, --data [DATA_JSON_FILE_PATH]', 'JSON file path for update data')
   .option('--autoAddSheet', 'Add when there was no sheet.')
-  .action((options) => {
-    (new SsToJson()).update({
-      authJsonPath: options.auth,
-      spreadsheetId: options.id,
-      sheetName: options.name,
-      values: JSON.parse(fs.readFileSync(options.data)),
-      autoAdd: options.autoAddSheet
-    }).then((result) => {
+  .action(async (options) => {
+    if (!existsSync(options.data)) {
+      console.error(`Error: no such file or directory, open '${options.data}'`)
+      return
+    }
+
+    try {
+      const result = await (new SsToJson()).update({
+        authJsonPath: options.auth,
+        spreadsheetId: options.id,
+        sheetName: options.name,
+        values: JSON.parse(readFileSync(options.data)),
+        autoAdd: options.autoAddSheet
+      })
       console.log(result)
-    }).catch((err) => {
+    } catch (err) {
       console.error(err)
-    })
+    }
   })
 
 program
   .version(packageJson.version)
   .parse(process.argv)
-
-if (!process.argv.slice(2).length) {
-  program.outputHelp()
-  process.exit(255)
-}
 
 // vim: set ft=javascript :
