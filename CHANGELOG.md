@@ -152,3 +152,8 @@
 - upgrade googleapis to 77 (#137)
 ## [3.2.16] - 2021-06-24
 - chore(deps): upgrade googleapis to 78 (#138)
+## [3.3.0] - 2022-01-20
+- chore(deps): upgrade googleapis
+- feat(cmd): show suggestions after an error for an unknown command or option (#142)
+- feat: use googleapis with async await (#143)
+- feat: improve command line option handling (#144)
