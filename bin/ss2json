@@ -10,10 +10,6 @@ const packageJson = existsSync(path.join(process.cwd(), 'package.json'))
   ? require(path.join(process.cwd(), 'package.json')) : {}
 
 program
-  .storeOptionsAsProperties(false)
-  .showSuggestionAfterError()
-
-program
   .command('get')
   .requiredOption('-a, --auth [AUTH_JSON_FILE_PATH]', 'JSON path for Google\'s authentication')
   .requiredOption('-i, --id [SPREADSHEET_ID]', 'Google Spreadsheet ID')
