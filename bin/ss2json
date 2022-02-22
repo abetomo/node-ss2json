@@ -3,9 +3,10 @@
 'use srict'
 
 const SsToJson = require('..')
-const { program } = require('commander')
-const { existsSync, readFileSync } = require('fs')
+const process = require('process')
 const path = require('path')
+const { existsSync, readFileSync } = require('fs')
+const { program } = require('commander')
 const packageJson = existsSync(path.join(process.cwd(), 'package.json'))
   ? require(path.join(process.cwd(), 'package.json')) : {}
 
