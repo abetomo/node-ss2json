@@ -34,7 +34,7 @@
     "remark-cli": "^10.0.0",
     "remark-preset-lint-recommended": "^6.1.1",
     "request": "^2.88.2",
-    "standard": "^16.0.4"
+    "standard": "^17.0.0"
   },
   "dependencies": {
     "commander": "^9.0.0",
