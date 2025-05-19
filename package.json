@@ -37,7 +37,7 @@
     "standard": "^17.1.0"
   },
   "dependencies": {
-    "commander": "^13.0.0",
+    "commander": "^14.0.0",
     "googleapis": "^148.0.0"
   },
   "files": [
