@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "commander": "^15.0.0",
-    "googleapis": "^173.0.0"
+    "googleapis": "^180.0.0"
   },
   "files": [
     "CHANGELOG.md",
